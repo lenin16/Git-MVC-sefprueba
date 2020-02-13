@@ -19,6 +19,8 @@
             <td>@item.IdCurso</td>
             <td>@item.Curso</td>
             <td>@item.oProfesor.Nombres</td>
+            <td>@Html.ActionLink("ACTUALIZAR", "EditarCurso",new {IdCurso=item.IdCurso })</td>
+            <td>@Html.ActionLink("ELIMINAR", "EliminarCurso", new { IdCurso = item.IdCurso })</td>
         </tr>
     }
 </table>

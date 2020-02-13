@@ -17,5 +17,25 @@ namespace BL
         {
             return oCursoDAL.ListadoCursos();
         }
-    }
+
+        public bool AgregarCurso(CursoE oCurso)
+        {
+            return oCursoDAL.AgregarCurso(oCurso);
+        }
+
+        public bool ActualizarCurso(CursoE oCurso)
+        {
+            return oCursoDAL.ActualizarCurso(oCurso);
+        }
+
+        public CursoE BuscarporId(int IdCurso)
+        {
+            return oCursoDAL.BuscarporId(IdCurso);
+        }
+
+        public bool EliminarCurso(int IdCurso)
+        {
+            return oCursoDAL.EliminarCurso(IdCurso);
+        }
+    }    
 }

@@ -110,6 +110,8 @@
     <Content Include="Views\Profesor\AgregarProfesor.cshtml" />
     <Content Include="Views\Profesor\EditarProfesor.cshtml" />
     <Content Include="Views\Curso\ListadoCursos.cshtml" />
+    <Content Include="Views\Curso\InsertarCurso.cshtml" />
+    <Content Include="Views\Curso\EditarCurso.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
