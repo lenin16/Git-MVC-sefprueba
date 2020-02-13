@@ -1,0 +1,24 @@
+﻿@model List<Entidad.CursoE>
+
+@{
+    ViewBag.Title = "ListadoCursos";
+    Layout = "~/Views/Layout/_LayoutMenu.cshtml";
+}
+
+<h2>Listado Cursos</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOMBRE DEL CURSO</th>
+        <th>PROFESOR</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.IdCurso</td>
+            <td>@item.Curso</td>
+            <td>@item.oProfesor.Nombres</td>
+        </tr>
+    }
+</table>

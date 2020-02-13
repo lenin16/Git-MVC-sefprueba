@@ -1,0 +1,29 @@
+﻿@model List<Entidad.ProfesorE>
+
+@{
+    ViewBag.Title = "ListadoProfesores";
+    Layout = "~/Views/Layout/_LayoutMenu.cshtml";
+}
+
+<h2>ListadoProfesores</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOMBRES</th>
+        <th>APELLIDO PATERNO</th>
+        <th>APELLIDO MATERNO</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+     <tr>
+        <td>@item.IdProfesor</td>
+        <td>@item.Nombres</td>
+        <td>@item.ApellidoP</td>
+        <td>@item.ApellidoM</td>
+        <td>@Html.ActionLink("ACTUALIZAR", "EditarProfesor", new { idProfesor = item.IdProfesor})</td>
+        <td>@Html.ActionLink("ELIMINAR", "EliminarProfesor", new { idProfesor = item.IdProfesor })</td>
+     </tr>
+    }
+</table>
+
+
