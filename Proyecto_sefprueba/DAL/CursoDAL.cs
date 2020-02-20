@@ -74,7 +74,13 @@ namespace DAL
             }
             catch (Exception ep)
             {
-                throw;           }
+                throw;
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open) cn.Close();
+
+            }
             return agregar;
         }
 
@@ -114,6 +120,11 @@ namespace DAL
             catch (Exception ep)
             {
                 throw;
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open) cn.Close();
+
             }
             return actualizar;
         }
